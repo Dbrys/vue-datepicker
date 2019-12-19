@@ -24,7 +24,7 @@ export default {
   data: function() {
     return {
       isHidden: true,
-      overlayView: 'none',
+      overlayView: "none",
       curMonth: "",
       days: null,
       prevBtn: `<`,
@@ -58,8 +58,10 @@ export default {
   methods: {
     getMonthDays: function() {
       this.isHidden = !this.isHidden;
-      this.overlayView === "none" ? this.overlayView = "block" : this.overlayView ="none";
-      console.log(this.overlayView)
+      this.overlayView === "none"
+        ? (this.overlayView = "block")
+        : (this.overlayView = "none");
+      console.log(this.overlayView);
       const month = new Date().getMonth();
       this.curMonth = this.getKeyValue(this.months, month);
       if (this.curMonth != null) {
